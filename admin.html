@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#060b1f">
+<meta name="robots" content="noindex">
+<title>Admin – MG Game Hub</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main" class="wrap admin">
+  <div id="notice"></div>
+  <section id="gate"><div class="loading"><span class="spinner"></span> Checking sign-in…</div></section>
+  <section id="dash" hidden>
+    <div class="dash-head">
+      <h1>Admin dashboard</h1>
+      <div class="row-actions"><button id="new-btn" class="btn btn-primary" type="button">Post APK</button><button id="out-btn" class="btn btn-ghost" type="button">Log out</button></div>
+    </div>
+    <div id="stats" class="stats"></div>
+    <div id="list-view">
+      <div class="toolbar">
+        <input id="aq" type="search" placeholder="Search your games" aria-label="Search your games" autocomplete="off">
+        <select id="astatus" aria-label="Filter by status"><option value="all">All</option><option value="published">Published</option><option value="draft">Drafts</option></select>
+        <select id="acat" aria-label="Filter by category"></select>
+      </div>
+      <div id="rows"></div>
+    </div>
+    <div id="editor" hidden></div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>window.supabase||document.write('<script src="https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"><\/script>')</script>
+<script src="supabase-config.js?v=5"></script>
+<script src="mg-bundle.js?v=5" data-entry="admin.js"></script>
+</body>
+</html>
